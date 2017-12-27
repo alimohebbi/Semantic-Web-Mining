@@ -82,7 +82,10 @@
   \pgfuseimage{titlepagelogo}
 %  \hspace{1cm}\pgfuseimage{titlepagelogo2}
 }
-
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{lipsum}
+\apptocmd{\frame}{}{\justifying}{}
 \begin{document}
 % the titlepage
 {\aauwavesbg
@@ -112,14 +115,64 @@
 
 \end{frame}
 \section{Semantic Web Mining}
+
+\begin{frame}{Semantic Web Mining}
+\begin{itemize}
+	\item Semantic web in data mining
+	\begin{itemize}
+		\item Concerned with deriving higher-level insights from data
+		\item Are knowledge intensive and can often benefit from using additional knowledge from various sources
+		\item Document classification, Document clustering
+	\end{itemize}
+	\item Data mining in semantic web
+	\begin{itemize}
+		\item Building ontologies is a time consuming task
+		\item Data mining techniques could be fruitfully exploited for learning models from existing Web data
+		\item Models can be used for building and enriching ontologies from
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsection{ِData mining in Semantic Web}
+\begin{frame}{Semantic Web Mining}{Data mining in Semantic Web}
+	 \begin{itemize}
+		\item In presence of noisy/inconsistent knowledge bases, that could be highly probable in  the Web, deductive reasoning is no more applicable 
+		\item inductive reasoning is grounded on the generalization of specific examples (assertions in the SW context) allowing the formulation of conclusions even when inconsistent/noisy knowledge bases are considered
+		\item The main focus is on   building the terminology of an ontology while less attention has been dedicated to the enrichment/construction of the assertional part
+		\item enrichment/construction of the assertional part, namely the ontology population problem results in an even more time consuming task
+	 \end{itemize}
+\end{frame}
+
 \subsection{Classification}
 \begin{frame}{Semantic Web Mining}{Classification}
-
+	\begin{itemize}
+		\item Ontology population task: the problem has been focused by casting it to a classification problem
+	 	\item Requires some assumption
+	 		\begin{enumerate}
+				\item Open world assumption
+				\item Non-disjointness of the classes
+				\item the availability of new similarity measures to exploit the expressiveness of DLs 
+	 		\end{enumerate}
+ 		\item Nearest Neighbor (NN) and Support Vector Machine have been used in studies.
+	\end{itemize}
 \end{frame}
-\subsection{Clustring}
+\subsection{Clustering}
 \begin{frame}{Semantic Web Mining}{Clustering}
-
+	\begin{itemize}
+	\item Ontology learning task: focuses on learning ontologies (mainly terminologies) from text documents by the use of clustering methods
+		\begin{enumerate}
+			\item Concepts are extracted from documents by the use of Natural Language Processing techniques   
+			\item Concept are clustered to obtain an initial terminology 
+			\item Enriched with new relationships  by means of association rules
+		\end{enumerate}
+	\item There are some drawbacks 
+		\begin{enumerate}
+			\item Semantic relations among the terms are not fully clear 
+			\item Expressiveness of the adopted language is less than OWL
+		\end{enumerate}
+	\end{itemize}
 \end{frame}
+
 \subsection{Association Rule Mining}
 \begin{frame}{Semantic Web Mining}{Association Rule Mining}
 \end{frame}
@@ -130,11 +183,14 @@
 
 
 \end{frame}
+
+
 \subsection{Related Works}
+
+
 \begin{frame}{Association Rule Mining}{Related Works}
 \begin{itemize}
-\item salam
-\item hi
+\item
 \end{itemize}
 
 \begin{figure}[H]
