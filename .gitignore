@@ -1,0 +1,15 @@
+*.aux
+*.log
+*.bbl
+*.blg
+*.ent
+*.out
+*.idx
+*.toc
+*.nav
+*.snm
+*.synctex.gz
+aalborgtheme.pdf
+*.docx
+/images/Thumbs.db
+
