@@ -105,9 +105,10 @@
 
 \section{Data Mining}
 \begin{frame}{Data Mining}
+
 \begin{itemize}
 \item Data mining is the study of collecting, cleaning, processing, analyzing, and gaining useful
-insight from data.
+insight from data  \cite{han2011data}.
 \item Data mining is a broad term that is used to describe different aspects of data processing
 (depending on the problem domain, applications, formulation, and data representations).
 \item Data may be arbitrary, unstructured, and even in a format that is not immediately suitable
@@ -133,11 +134,11 @@ for automated processing.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{images/Classification.PNG}
-	\label{fig:Classification}
+ 
 \end{figure}
 
 \end{frame}
-\subsection{Clustring}
+\subsection{Clustering}
 \begin{frame}{Data Mining}{Clustering}
 
 \begin{itemize}
@@ -168,13 +169,15 @@ frequent patterns.
 \end{figure}
 \end{itemize}
 \end{frame}
-\begin{frame}
+
+
+\begin{frame}{Data Mining}{Association Rule Mining}
 \begin{itemize}
 \item Frequent itemsets can be used to generate association rules of the form
-$X => Y$\\
+$X \rightarrow Y$\\
 X and Y are set of items.
 \item For example, if the supermarket owner discovers the following rule
-{Eggs, Milk} $=>$ {Yogurt}
+$\{Eggs, Milk\} \rightarrow \{Yogurt\}$
 \item As a conclusion, she/he can promote Yogurt to customers who often buy Eggs and Milk.
 \item The frequency-based model for associative pattern mining is very popular due to its
 simplicity.
@@ -247,10 +250,12 @@ simplicity.
 		 
 	\item Association rule mining has following applications in semantic web
 		\begin{enumerate}
-			\item Amending RDF entities \cite{abedjan2014amending}
+			\item Enriching ontology \cite{abedjan2014amending} \cite{d2012semantic}
 			\item Finding new relations \cite{abedjan2013improving}
 			\item Discrimination discovery \cite{luong2016classification}
-			\item Rule discovery \cite{barati2017mining}
+			\item Building ontologies \cite{das2016semantic}
+			\item Ontology alignment 
+			\cite{galarraga2013mining}
 			
 		\end{enumerate}
 \end{itemize}
