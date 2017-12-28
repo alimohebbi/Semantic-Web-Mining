@@ -85,6 +85,8 @@
 \usepackage{ragged2e}
 \usepackage{etoolbox}
 \usepackage{lipsum}
+\usepackage{subcaption}
+\usepackage{mathtools}
 \apptocmd{\frame}{}{\justifying}{}
 \begin{document}
 % the titlepage
@@ -183,13 +185,13 @@ simplicity.
 
 \begin{frame}{Semantic Web Mining}
 \begin{itemize}
-	\item Semantic web in data mining
+	\item Semantic web in data mining \cite{ristoski2016semantic}
 	\begin{itemize}
 		\item Concerned with deriving higher-level insights from data
 		\item Are knowledge intensive and can often benefit from using additional knowledge from various sources
-		\item Document classification, Document clustering
+		\item Document classification, Document clustering \cite{berendt2004roadmap}
 	\end{itemize}
-	\item Data mining in semantic web
+	\item Data mining in semantic web \cite{d2010inductive}
 	\begin{itemize}
 		\item Building ontologies is a time consuming task
 		\item Data mining techniques could be fruitfully exploited for learning models from existing Web data
@@ -200,7 +202,8 @@ simplicity.
 
 \subsection{ِData mining in Semantic Web}
 \begin{frame}{Semantic Web Mining}{Data mining in Semantic Web}
-	 \begin{itemize}
+	Why we need it? \cite{d2010inductive}
+	 \begin{itemize} 
 		\item In presence of noisy/inconsistent knowledge bases, that could be highly probable in  the Web, deductive reasoning is no more applicable 
 		\item inductive reasoning is grounded on the generalization of specific examples (assertions in the SW context) allowing the formulation of conclusions even when inconsistent/noisy knowledge bases are considered
 		\item The main focus is on   building the terminology of an ontology while less attention has been dedicated to the enrichment/construction of the assertional part
@@ -211,7 +214,7 @@ simplicity.
 \subsection{Classification}
 \begin{frame}{Semantic Web Mining}{Classification}
 	\begin{itemize}
-		\item Ontology population task: the problem has been focused by casting it to a classification problem
+		\item Ontology population task: the problem has been focused by casting it to a classification problem \cite{d2010inductive}
 	 	\item Requires some assumption
 	 		\begin{enumerate}
 				\item Open world assumption
@@ -224,7 +227,7 @@ simplicity.
 \subsection{Clustering}
 \begin{frame}{Semantic Web Mining}{Clustering}
 	\begin{itemize}
-	\item Ontology learning task: focuses on learning ontologies (mainly terminologies) from text documents by the use of clustering methods
+	\item Ontology learning task: focuses on learning ontologies (mainly terminologies) from text documents by the use of clustering methods \cite{d2010inductive}
 		\begin{enumerate}
 			\item Concepts are extracted from documents by the use of Natural Language Processing techniques   
 			\item Concept are clustered to obtain an initial terminology 
@@ -242,13 +245,13 @@ simplicity.
 \begin{frame}{Semantic Web Mining}{Association Rule Mining}
 \begin{itemize}
 		 
-	\item Accossiation rule mining has following applications in semantic web
+	\item Association rule mining has following applications in semantic web
 		\begin{enumerate}
-			\item Amending RDF entities 
-			\item Finding new relations
-			\item Discrimination discovery
-			\item Rule discovery
-			\item Ontology Alignment
+			\item Amending RDF entities \cite{abedjan2014amending}
+			\item Finding new relations \cite{abedjan2013improving}
+			\item Discrimination discovery \cite{luong2016classification}
+			\item Rule discovery \cite{barati2017mining}
+			
 		\end{enumerate}
 \end{itemize}
 \end{frame}
@@ -256,9 +259,10 @@ simplicity.
 \section{Association Rule Mining}
 \subsection{Challenges}
 \begin{frame}{Association Rule Mining}{Challenges}
+	There are some challenges in semantic rule mining (also in semantic web mining)  \cite{nebot2012finding}
 	\begin{itemize}
 		 
-		\item  DM algorithms input vs ontology repesenation: The usual way to represent these assertions is as triples (subject, predicate, object) the identification of transactions and items is not trivial
+		\item  DM algorithms input vs ontology representation: The usual way to represent these assertions is as triples (subject, predicate, object) the identification of transactions and items is not trivial
 		\item Structural heterogeneity issues: OWL is sustained by description logics (DLs), annotated data does not follow a rigid structure. That is, instances belonging to the same OWL class may have different structures
 		\item Implicit data: Since DLs are defined with formal semantics, reasoning capabilities must be applied in order to handle the implicit knowledge 
 	\end{itemize}
@@ -267,23 +271,89 @@ simplicity.
 
 \subsection{Related Works}
 
-
-\begin{frame}{Association Rule Mining}{Related Works}
+\begin{frame}{Association Rule Mining}{Related Works:  Improving RDF Data Through Association Rule Mining}
+Improving RDF Data Through Association Rule Mining \cite{abedjan2013improving}
 \begin{itemize}
-\item
+	
+	\item Introduce “mining configurations”, which allow us to mine RDF data sets in various ways
+	\item Different configurations enable us to identify schema and value dependencies that in combination result in interesting use cases
+	\item present rule-based approaches for predicate suggestion, data enrichment, ontology improvement, and query relaxation
+	\item association rule mining benefits the integration and usability of RDF data
+	\item Previous work concentrates on inductive logic programming and graph mining, or is restricted to scenarios where domain knowledge and complete ontology structures are available
 \end{itemize}
+\end{frame}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.0\textwidth]{images/prediction-process.PNG}
-	\caption{process \cite{nam2014survey}}
-	\label{fig:prediction-process}
+\begin{frame}{Association Rule Mining}{Related Works:  Improving RDF Data Through Association Rule Mining}
+
+\begin{itemize}
+\item configuration specifies one element of the SPO construct as the context of rule mining (the transaction identifiers) and another as the target of rule mining (the items and transactions)
+
+\begin{figure} 
+	\includegraphics[width=.6\linewidth]{images/rule-config.PNG}
 \end{figure}
 
+\end{itemize}
 \end{frame}
+
+\begin{frame}{Association Rule Mining}{Related Works:  Amending RDF entities with new facts}
+\begin{itemize}
+\item Amending RDF entities with new facts \cite{abedjan2014amending}
+	\begin{enumerate}
+		\item Mining RDF predicates and supports manual statement creation by suggesting new predicates : reasonable hints, prevent user from using inappropriate synonyms 
+		\item Mining both predicates and objects, we are able to generate entirely new statements for a given data set
+	 
+
+	\end{enumerate}
+	\item This approach does not rely on external data sources or structural information, such as ontologies
+	\item  Previous work \cite{abedjan2013improving} was user-driven auto-amendment but this approach is this approach data-driven auto-amendment
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Association Rule Mining}{Related Works:  Amending RDF entities with new facts}
+	\begin{itemize}
+	\item Predicate suggestion
+		\begin{figure} 
+		 \includegraphics[width=.5\linewidth]{images/suggestion-formula.PNG}
+			\includegraphics[width=.4\linewidth]{images/predicate-suggestion.PNG}
+		\end{figure}
+	\item For object rules $O^\prime \rightarrow o$ with high confidence (above 90 $\%$) and $O^\prime$ $ \subseteq$ O, the subjects  $S^{O^\prime} $	occurring with the objects $O^\prime$ are also likely to occur with the	object o
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Association Rule Mining}{Related Works:  SWARM}
+An Approach for Mining Semantic Association Rules from Semantic Web Data \cite{barati2016swarm}
+\begin{itemize}
+\item Utilize knowledge encode in the schema-level to enrich the semantics of rules
+\item  Evaluates the importance of rules by using $rdf:type$ and $rdf:subClassOf$ relations in the ontology
+\item introduced new support and confidence formula
+\item From the triples, this approach generates the following rule
+	\begin{figure} 
+		\centering
+		\includegraphics[width=1\linewidth]{images/swarm-example.PNG}
+		 
+	\end{figure}
+
+
+	
+\end{itemize}
+\end{frame}
+	
+	
+
+
 
 \section{References}
  \begin{frame}[allowframebreaks] {References}
+
+\setbeamerfont{bibliography item}{size=\scriptsize}
+\setbeamerfont{bibliography entry author}{size=\scriptsize}
+\setbeamerfont{bibliography entry title}{size=\scriptsize}
+\setbeamerfont{bibliography entry location}{size=\scriptsize}
+\setbeamerfont{bibliography entry note}{size=\scriptsize}
+
  \bibliographystyle{plain}
 \bibliography{References}
 \end{frame}
