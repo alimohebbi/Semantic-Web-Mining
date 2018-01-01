@@ -111,8 +111,7 @@
 insight from data  \cite{han2011data}.
 \item Data mining is a broad term that is used to describe different aspects of data processing
 (depending on the problem domain, applications, formulation, and data representations).
-\item Data may be arbitrary, unstructured, and even in a format that is not immediately suitable
-for automated processing.
+
 \end{itemize}
 \begin{figure}[H]
 	\centering
@@ -126,14 +125,11 @@ for automated processing.
 \begin{itemize}
 \item Classification is a data mining function that assigns items in a collection to target categories or classes. The goal of classification is to accurately predict the target class for each case in the data. For example, a classification model could be used to identify loan applicants as low, medium, or high credit risks.
 
-\item Classifier include a supervised model that can learn from a training data and then classify the test data.
-
-\item A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples.
 
 \end{itemize}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\textwidth]{images/Classification.PNG}
+	\includegraphics[width=0.6\textwidth]{images/Classification.jpg}
  
 \end{figure}
 
@@ -147,10 +143,13 @@ so that objects within a cluster have high similarity, but are very dissimilar t
 other clusters.
 \item Dissimilarities and similarities are assessed based on the attribute values describing the
 objects and often involve distance measures.
-\item Clustering as a data mining tool has its roots in many application areas such as biology,
-security, business intelligence, and Web search.
-\end{itemize}
 
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/clustering.png}
+
+\end{figure}
 \end{frame}
 \subsection{Association Rule Mining}
 \begin{frame}{Data Mining}{Association Rule Mining}
@@ -390,8 +389,8 @@ Improving RDF Data Through Association Rule Mining \cite{abedjan2013improving}
 An Approach for Mining Semantic Association Rules from Semantic Web Data \cite{barati2016swarm}
 \begin{itemize}
 \item Utilize knowledge encode in the schema-level to enrich the semantics of rules
-\item  Evaluates the importance of rules by using $rdf:type$ and $rdf:subClassOf$ relations in the ontology
 \item introduced new support and confidence formula
+\item The proposed rule quality factors (Support and confidence) consider knowledge not only in the instance-level but also schema-level ($rdf:type$ and $rdf:subClassOf$)
 \item From the triples, this approach generates the following rule
 	\begin{figure} 
 		\centering
