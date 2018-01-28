@@ -111,7 +111,8 @@
 insight from data  \cite{han2011data}.
 \item Data mining is a broad term that is used to describe different aspects of data processing
 (depending on the problem domain, applications, formulation, and data representations).
-
+\item Data may be arbitrary, unstructured, and even in a format that is not immediately suitable
+for automated processing.
 \end{itemize}
 \begin{figure}[H]
 	\centering
@@ -123,13 +124,16 @@ insight from data  \cite{han2011data}.
 \subsection{Classification}
 \begin{frame}{Data Mining}{Classification}
 \begin{itemize}
-\item Classification is a data mining function that assigns items in a collection to target categories or classes. The goal of classification is to accurately predict the target class for each case in the data
+\item Classification is a data mining function that assigns items in a collection to target categories or classes. The goal of classification is to accurately predict the target class for each case in the data. For example, a classification model could be used to identify loan applicants as low, medium, or high credit risks.
 
+\item Classifier include a supervised model that can learn from a training data and then classify the test data.
+
+\item A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples.
 
 \end{itemize}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{images/Classification.jpg}
+	\includegraphics[width=0.4\textwidth]{images/Classification.jpg}
  
 \end{figure}
 
@@ -143,13 +147,10 @@ so that objects within a cluster have high similarity, but are very dissimilar t
 other clusters.
 \item Dissimilarities and similarities are assessed based on the attribute values describing the
 objects and often involve distance measures.
-
+\item Clustering as a data mining tool has its roots in many application areas such as biology,
+security, business intelligence, and Web search.
 \end{itemize}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.5\textwidth]{images/clustering.png}
 
-\end{figure}
 \end{frame}
 \subsection{Association Rule Mining}
 \begin{frame}{Data Mining}{Association Rule Mining}
@@ -194,7 +195,11 @@ simplicity.
 		\item Document classification, Document clustering \cite{berendt2004roadmap}
 	\end{itemize}
 	\item Data mining in semantic web \cite{d2010inductive}
-
+	\begin{itemize}
+		\item Building ontologies is a time consuming task
+		\item Data mining techniques could be fruitfully exploited for learning models from existing Web data
+		\item Models can be used for building and enriching ontologies from
+	\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -271,74 +276,7 @@ simplicity.
 
 \subsection{Related Works}
 
-\begin{frame}{Association Rule Mining}{Related Works:  Improving RDF Data Through Association Rule Mining}
-Improving RDF Data Through Association Rule Mining \cite{abedjan2013improving}
-\begin{itemize}
-	
-	\item Introduce “mining configurations”, which allow us to mine RDF data sets in various ways
-	\item Different configurations enable us to identify schema and value dependencies that in combination result in interesting use cases
-	\item Present rule-based approaches for predicate suggestion, data enrichment, ontology improvement, and query relaxation
-	\item Previous work concentrates on inductive logic programming and graph mining, or is restricted to scenarios where domain knowledge and complete ontology structures are available
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Association Rule Mining}{Related Works:  Improving RDF Data Through Association Rule Mining}
-
-\begin{itemize}
-\item configuration specifies one element of the SPO construct as the context of rule mining (the transaction identifiers) and another as the target of rule mining (the items and transactions)
-
-\begin{figure} 
-	\includegraphics[width=.6\linewidth]{images/rule-config.PNG}
-\end{figure}
-
-
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Association Rule Mining}{Related Works:  Amending RDF entities with new facts}
-\begin{itemize}
-\item Amending RDF entities with new facts \cite{abedjan2014amending}
-\begin{enumerate}
-\item Mining RDF predicates and supports manual statement creation by suggesting new predicates : reasonable hints, prevent user from using inappropriate synonyms 
-\item Mining both predicates and objects, we are able to generate entirely new statements for a given data set
-
-
-\end{enumerate}
-\item This approach does not rely on external data sources or structural information, such as ontologies
-\item  Previous work \cite{abedjan2013improving} was user-driven auto-amendment but this approach is this approach data-driven auto-amendment
-\end{itemize}
-\end{frame}
-
-
-
-\begin{frame}{Association Rule Mining}{Related Works:  Amending RDF entities with new facts}
-\begin{itemize}
-\item Predicate suggestion
-\begin{figure} 
-\includegraphics[width=.5\linewidth]{images/suggestion-formula.PNG}
-\includegraphics[width=.4\linewidth]{images/predicate-suggestion.PNG}
-\end{figure}
-\item For object rules $O^\prime \rightarrow o$ with high confidence (above 90 $\%$) and $O^\prime$ $ \subseteq$ O, the subjects  $S^{O^\prime} $	occurring with the objects $O^\prime$ are also likely to occur with the	object o
-
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Association Rule Mining}{Related Works:  SWARM}
-An Approach for Mining Semantic Association Rules from Semantic Web Data \cite{barati2016swarm}
-\begin{itemize}
-\item Utilize knowledge encode in the schema-level to enrich the semantics of rules
-\item introduced new support and confidence formula
-\item The proposed rule quality factors (Support and confidence) consider knowledge not only in the instance-level but also schema-level ($rdf:type$ and $rdf:subClassOf$)
-\item From the triples, this approach generates the following rule
-\begin{figure} 
-\centering
-\includegraphics[width=1\linewidth]{images/swarm-example.PNG}
-
-\end{figure}
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Association Rule Mining}{Related Works: Semantic Model for Web-Based Big Data}
+\begin{frame}{Association Rule Mining}{Related Works}
 \begin{itemize}
 \item Semantic Model for Web-Based Big Data Using Ontology and Fuzzy Rule Mining \cite{das2016semantic}
 \begin{itemize}
@@ -354,7 +292,7 @@ An Approach for Mining Semantic Association Rules from Semantic Web Data \cite{b
 \end{figure}
 \end{frame}
 
-\begin{frame}{Association Rule Mining}{Related Works: Semantic Model for Web-Based Big Data}
+\begin{frame}{Association Rule Mining}{Related Works}
 \begin{itemize}
 \item Mining Rules to Align Knowledge Bases \cite{galarraga2013mining}
 \begin{itemize}
@@ -375,14 +313,16 @@ An Approach for Mining Semantic Association Rules from Semantic Web Data \cite{b
 
 
 
-\begin{frame}{Association Rule Mining}{Related Works:  Semantic Knowledge Discovery}
+\begin{frame}{Association Rule Mining}{Related Works}
 \begin{itemize}
-\item Semantic Knowledge Discovery from Heterogeneous Data Sources\cite{d2012semantic}
+\item Semantic Knowledge Discovery from Heterogeneous Data Sources
+Claudia \cite{d2012semantic}
 \begin{itemize}
-\item This study combines database and ontology data and then mine association rules using Apriori.
+\item This study combines database and ontology data and then mine association rules.
 \item A frequent itemset expresses the variables and the corresponding values that occur reasonably often together in database.
+\item At the first step integrate ontology and database.
+\item Using Apriori frequent itemset extract frequent itemsets and then mine association rules. 
 \item Now these extracted rules can help to enrich the database or ontology, or for data analysis and data completion.
-\item e.g. if someone earns between 15000 and 24999 euro, he/she has a 100\% confidence of having a child and being a Child
 \end{itemize}
 \end{itemize}
 \begin{figure}[H]
@@ -393,7 +333,73 @@ An Approach for Mining Semantic Association Rules from Semantic Web Data \cite{b
 \end{figure}
 \end{frame}
 
+\begin{frame}{Association Rule Mining}{Related Works:  Improving RDF Data Through Association Rule Mining}
+Improving RDF Data Through Association Rule Mining \cite{abedjan2013improving}
+\begin{itemize}
+	
+	\item Introduce “mining configurations”, which allow us to mine RDF data sets in various ways
+	\item Different configurations enable us to identify schema and value dependencies that in combination result in interesting use cases
+	\item Present rule-based approaches for predicate suggestion, data enrichment, ontology improvement, and query relaxation
+	\item Association rule mining benefits the integration and usability of RDF data
+	\item Previous work concentrates on inductive logic programming and graph mining, or is restricted to scenarios where domain knowledge and complete ontology structures are available
+\end{itemize}
+\end{frame}
+ 
+\begin{frame}{Association Rule Mining}{Related Works:  Improving RDF Data Through Association Rule Mining}
 
+\begin{itemize}
+\item configuration specifies one element of the SPO construct as the context of rule mining (the transaction identifiers) and another as the target of rule mining (the items and transactions)
+
+\begin{figure} 
+	\includegraphics[width=.6\linewidth]{images/rule-config.PNG}
+\end{figure}
+
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Association Rule Mining}{Related Works:  Amending RDF entities with new facts}
+\begin{itemize}
+\item Amending RDF entities with new facts \cite{abedjan2014amending}
+	\begin{enumerate}
+		\item Mining RDF predicates and supports manual statement creation by suggesting new predicates : reasonable hints, prevent user from using inappropriate synonyms 
+		\item Mining both predicates and objects, we are able to generate entirely new statements for a given data set
+	 
+
+	\end{enumerate}
+	\item This approach does not rely on external data sources or structural information, such as ontologies
+	\item  Previous work \cite{abedjan2013improving} was user-driven auto-amendment but this approach is this approach data-driven auto-amendment
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Association Rule Mining}{Related Works:  Amending RDF entities with new facts}
+	\begin{itemize}
+	\item Predicate suggestion
+		\begin{figure} 
+		 \includegraphics[width=.5\linewidth]{images/suggestion-formula.PNG}
+			\includegraphics[width=.4\linewidth]{images/predicate-suggestion.PNG}
+		\end{figure}
+	\item For object rules $O^\prime \rightarrow o$ with high confidence (above 90 $\%$) and $O^\prime$ $ \subseteq$ O, the subjects  $S^{O^\prime} $	occurring with the objects $O^\prime$ are also likely to occur with the	object o
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Association Rule Mining}{Related Works:  SWARM}
+An Approach for Mining Semantic Association Rules from Semantic Web Data \cite{barati2016swarm}
+\begin{itemize}
+\item Utilize knowledge encode in the schema-level to enrich the semantics of rules
+\item  Evaluates the importance of rules by using $rdf:type$ and $rdf:subClassOf$ relations in the ontology
+\item introduced new support and confidence formula
+\item From the triples, this approach generates the following rule
+	\begin{figure} 
+		\centering
+		\includegraphics[width=1\linewidth]{images/swarm-example.PNG}
+		 
+	\end{figure}
+\end{itemize}
+\end{frame}
 	
 	
 
